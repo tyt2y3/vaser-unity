@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Demo : MonoBehaviour {
 
-    private int mode = 1;
+    public int mode = 0;
     private Polyline polyline = null;
     private Polyline.Opt opt = new Polyline.Opt();
     private GameObject myGameObject = null;
@@ -28,57 +28,30 @@ public class Demo : MonoBehaviour {
             holder = new VertexArrayHolder();
             holder.Push3(
                 new Vector2(-2, 0.5f),
-                new Vector2(-1, 0.5f),
-                new Vector2(-2, -0.5f),
+                new Vector2(-1.5f, 0.5f),
+                new Vector2(-2, 0.0f),
                 Color.red,
                 Color.green,
                 Color.blue,
                 5, 0, 5
             );
             holder.Push3(
+                new Vector2(-2, 0.0f),
+                new Vector2(-1.5f, -0.5f),
                 new Vector2(-2, -0.5f),
-                new Vector2(-1, -0.5f),
-                new Vector2(-2, -0.75f),
-                Color.red,
-                Color.green,
                 Color.blue,
-                1.25f, 0, 5
+                Color.green,
+                Color.red,
+                0, 5, 5
             );
             holder.Push3(
-                new Vector2(-0.6f, 0.5f),
-                new Vector2(-0.1f, 0.5f),
-                new Vector2(-0.6f, -0.5f),
-                Color.red,
-                Color.green,
+                new Vector2(-2, 0.0f),
+                new Vector2(-1.5f, 0.5f),
+                new Vector2(-1.5f, -0.5f),
                 Color.blue,
-                5, 0, 2.5f
-            );
-            holder.Push3(
-                new Vector2(-0.6f, -0.5f),
-                new Vector2(-0.1f, -0.5f),
-                new Vector2(-0.6f, -0.75f),
-                Color.red,
                 Color.green,
-                Color.blue,
-                1.25f, 0, 2.5f
-            );
-            holder.Push3(
-                new Vector2(0.25f, 0.5f),
-                new Vector2(2.25f, 0.5f),
-                new Vector2(0.25f, -0.5f),
-                Color.red,
                 Color.green,
-                Color.blue,
-                5, 0, 10
-            );
-            holder.Push3(
-                new Vector2(0.25f, -0.5f),
-                new Vector2(2f, -0.5f),
-                new Vector2(0.25f, -0.75f),
-                Color.red,
-                Color.green,
-                Color.blue,
-                1.25f, 0, 10
+                5, 0, 5
             );
         } else if (mode == 1) {
             polyline = new Polyline(
